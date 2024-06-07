@@ -16,6 +16,7 @@ namespace hotel_managmenet_system
         public Form3()
         {
             InitializeComponent();
+            LoadRoomTypes();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace hotel_managmenet_system
             obj.cmd.Parameters.AddWithValue("@address", textAdress.Text);
             obj.cmd.Parameters.AddWithValue("@status", status.Text);
             obj.cmd.Parameters.AddWithValue("@people", textPeople.Text);
-            obj.cmd.Parameters.AddWithValue("@typeroom", typeRoom.Text);
+            obj.cmd.Parameters.AddWithValue("@typeroom", room_type.Text);
             obj.cmd.ExecuteNonQuery();
             obj.con.Close();
             MessageBox.Show("waa la diiwan galiyey customerkan.");
@@ -86,7 +87,7 @@ namespace hotel_managmenet_system
                 textAdress.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 status.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 textPeople.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                typeRoom.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                room_type.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 
 
             }
@@ -122,7 +123,7 @@ namespace hotel_managmenet_system
             obj.cmd.Parameters.AddWithValue("@address", textAdress.Text);
             obj.cmd.Parameters.AddWithValue("@status", status.Text);
             obj.cmd.Parameters.AddWithValue("@people", textPeople.Text);
-            obj.cmd.Parameters.AddWithValue("@typeroom", typeRoom.Text);
+            obj.cmd.Parameters.AddWithValue("@typeroom", room_type.Text);
             obj.cmd.Parameters.AddWithValue("@customer_id", textCustomerId.Text);
             obj.cmd.ExecuteNonQuery();
             obj.con.Close();
@@ -175,5 +176,33 @@ namespace hotel_managmenet_system
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void LoadRoomTypes()
+        {
+            myconn obj = new myconn();
+            obj.con.Open();
+            obj.qry = "select room_type from hotel__rooms";
+            obj.cmd = new SqlCommand(obj.qry, obj.con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = obj.cmd;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            room_type.DataSource = dt;
+            room_type.DisplayMember = "room_type";
+            obj.con.Close();
+        }
+    
+      
+
     }
 }

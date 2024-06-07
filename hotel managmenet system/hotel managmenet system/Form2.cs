@@ -46,5 +46,14 @@ namespace hotel_managmenet_system
 
 
         }
+
+        private void registerationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 frm7 = new Form7();
+            frm7.Show();
+            this.Hide();
+
+
+        }
     }
 }

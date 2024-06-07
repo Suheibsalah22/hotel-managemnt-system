@@ -22,3 +22,4 @@ C:\Users\Suhaib\Desktop\hotel managmenet system\hotel managmenet system\hotel ma
 C:\Users\Suhaib\Desktop\hotel managmenet system\hotel managmenet system\hotel managmenet system\obj\Debug\hotel_managmenet_system.Form4.resources
 C:\Users\Suhaib\Desktop\hotel managmenet system\hotel managmenet system\hotel managmenet system\obj\Debug\hotel_managmenet_system.Properties.Resources.resources
 C:\Users\Suhaib\Desktop\hotel managmenet system\hotel managmenet system\hotel managmenet system\obj\Debug\hotel managmenet system.csproj.GenerateResource.Cache
+C:\Users\Suhaib\Desktop\hotel managmenet system\hotel managmenet system\hotel managmenet system\obj\Debug\hotel_managmenet_system.Form7.resources

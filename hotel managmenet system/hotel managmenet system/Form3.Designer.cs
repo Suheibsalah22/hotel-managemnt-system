@@ -42,7 +42,6 @@
             this.textPeople = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.typeRoom = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.button = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.room_type = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +62,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(436, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 42);
+            this.label1.Size = new System.Drawing.Size(369, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Customer registeration";
+            this.label1.Text = "Booking registeration";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
@@ -189,18 +189,6 @@
             this.label7.Text = "Type room";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // typeRoom
-            // 
-            this.typeRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typeRoom.FormattingEnabled = true;
-            this.typeRoom.Items.AddRange(new object[] {
-            "Vip room",
-            "normal room"});
-            this.typeRoom.Location = new System.Drawing.Point(246, 774);
-            this.typeRoom.Name = "typeRoom";
-            this.typeRoom.Size = new System.Drawing.Size(417, 28);
-            this.typeRoom.TabIndex = 13;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
@@ -248,6 +236,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1027, 317);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // textCustomerId
@@ -301,11 +290,21 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // room_type
+            // 
+            this.room_type.FormattingEnabled = true;
+            this.room_type.Location = new System.Drawing.Point(286, 803);
+            this.room_type.Name = "room_type";
+            this.room_type.Size = new System.Drawing.Size(311, 28);
+            this.room_type.TabIndex = 22;
+            this.room_type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.room_type);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button);
             this.Controls.Add(this.textCustomerId);
@@ -314,7 +313,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.typeRoom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textPeople);
             this.Controls.Add(this.label6);
@@ -352,7 +350,6 @@
         private System.Windows.Forms.TextBox textPeople;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox typeRoom;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -362,5 +359,6 @@
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ComboBox room_type;
     }
 }

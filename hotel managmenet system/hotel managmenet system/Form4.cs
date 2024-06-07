@@ -40,5 +40,17 @@ namespace hotel_managmenet_system
             obj.con.Close();
           
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            myconn obj = new myconn();
+            obj.con.Open();
+            obj.qry = "select count(*) from hotel__rooms";
+            obj.cmd = new SqlCommand(obj.qry, obj.con);
+            int x = System.Convert.ToInt32(obj.cmd.ExecuteScalar());
+            Dashboard_rooms.Text = x.ToString();
+
+            obj.con.Close();
+        }
     }
 }

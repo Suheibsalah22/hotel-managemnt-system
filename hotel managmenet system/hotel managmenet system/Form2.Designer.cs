@@ -35,6 +35,8 @@
             this.registerCustomerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dashboardToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -56,6 +58,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerCustomerToolStripMenuItem,
+            this.registerRoomToolStripMenuItem,
             this.dashboardToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,8 +77,8 @@
             // registerCustomerToolStripMenuItem1
             // 
             this.registerCustomerToolStripMenuItem1.Name = "registerCustomerToolStripMenuItem1";
-            this.registerCustomerToolStripMenuItem1.Size = new System.Drawing.Size(234, 30);
-            this.registerCustomerToolStripMenuItem1.Text = "register customer";
+            this.registerCustomerToolStripMenuItem1.Size = new System.Drawing.Size(216, 30);
+            this.registerCustomerToolStripMenuItem1.Text = "Book customer";
             this.registerCustomerToolStripMenuItem1.Click += new System.EventHandler(this.registerCustomerToolStripMenuItem1_Click);
             // 
             // dashboardToolStripMenuItem
@@ -89,9 +92,24 @@
             // dashboardToolStripMenuItem1
             // 
             this.dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(210, 30);
+            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(184, 30);
             this.dashboardToolStripMenuItem1.Text = "Dashboard";
             this.dashboardToolStripMenuItem1.Click += new System.EventHandler(this.dashboardToolStripMenuItem1_Click);
+            // 
+            // registerRoomToolStripMenuItem
+            // 
+            this.registerRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerationToolStripMenuItem});
+            this.registerRoomToolStripMenuItem.Name = "registerRoomToolStripMenuItem";
+            this.registerRoomToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
+            this.registerRoomToolStripMenuItem.Text = "Register room";
+            // 
+            // registerationToolStripMenuItem
+            // 
+            this.registerationToolStripMenuItem.Name = "registerationToolStripMenuItem";
+            this.registerationToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.registerationToolStripMenuItem.Text = "registeration";
+            this.registerationToolStripMenuItem.Click += new System.EventHandler(this.registerationToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -142,5 +160,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registerRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerationToolStripMenuItem;
     }
 }
